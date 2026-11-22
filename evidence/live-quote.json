@@ -1,0 +1,31 @@
+{
+  "mode": "telegraph-sepolia-escrow",
+  "status": "quoted_only",
+  "spentUusdc": 0,
+  "quote": {
+    "discoveryUrl": "https://devnode.telegraphprotocol.com/engine/v1/intents/GRID_POWER_PRICE_GENERAL",
+    "miner": {
+      "id": "714109",
+      "slug": "zk-gridexact",
+      "name": "ZK Exact CAISO Day-Ahead Prices"
+    },
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/714109",
+    "request": {
+      "intent": "GRID_POWER_PRICE_GENERAL",
+      "params": {
+        "node_or_zone": "TH_NP15_GEN-APND",
+        "interval_start": "2026-11-22T09:00:00Z"
+      }
+    },
+    "quotedAt": "2026-11-22T08:08:30.071Z",
+    "httpStatus": 402,
+    "escrow": {
+      "scheme": "escrow",
+      "network": "eip155:11155111",
+      "payTo": "0x72a70e949362670bf8bcead24efc5b8f950aa08b",
+      "amountUusdc": 10000,
+      "resource": "/v1/ask/714109",
+      "template": "Telegraph Escrow Payment\n\nWallet: {from}\nPay To: 0x72a70e949362670bf8bcead24efc5b8f950aa08b\nNetwork: eip155:11155111\nAmount: 10000 uUSDC\nResource: /v1/ask/714109\nNonce: {nonce}\nValid After: {validAfter}\nValid Before: {validBefore}"
+    }
+  }
+}

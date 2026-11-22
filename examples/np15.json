@@ -1,0 +1,14 @@
+{
+  "hub": "TH_NP15_GEN-APND",
+  "intervalStart": "2026-11-22T09:00:00Z",
+  "fleet": {
+    "powerMw": 1.2,
+    "hashratePhPerSecond": 60,
+    "hashpriceUsdPerPhPerDay": 50,
+    "poolFeePct": 2,
+    "powerAdderUsdPerMwh": 6,
+    "variableCostUsdPerHour": 8,
+    "curtailmentCreditUsdPerHour": 10,
+    "minimumRunAdvantageUsd": 5
+  }
+}

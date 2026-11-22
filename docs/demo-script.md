@@ -1,0 +1,15 @@
+# GridMargin demo script
+
+**Target length** 3 minutes 30 seconds. Record a terminal at a readable font size with the job and run record open in an editor. Complete one funded GridMargin testnet run before recording so you know the selected hub and interval have returned usable data. Set up the dedicated signer outside the recording. Keep private keys and payment authorization headers off screen. Use a fresh run-record path for the on-camera purchase.
+
+| Time | Screen | Narration |
+| --- | --- | --- |
+| 0:00–0:25 | Open the project README and the Mining and Power mission. | “This is GridMargin, an Apps & Agents entry for Telegraph Season II. A Bitcoin mining operator needs to know when the next hour of electricity is worth buying. GridMargin buys the day-ahead power price and turns it into a dispatch recommendation.” |
+| 0:25–0:55 | Open a job. Point to the CAISO hub, UTC hour, megawatts, hash rate and curtailment credit. | “Here’s the input. The hub and settlement hour go to Telegraph. The fleet’s costs and revenue assumptions stay in the local calculator.” |
+| 0:55–1:25 | Run `npm run --silent gridmargin -- quote examples/np15.json`, or use the public-safe job shown on screen. Show HTTP 402, the Intent, miner, network and quote. | “The agent discovers a CAISO specialist and asks for this exact hour. Telegraph returns a Sepolia escrow challenge. The agent caps the authorization at 10,000 micro-USDC. This quote has spent nothing.” |
+| 1:25–2:15 | With signer already loaded off camera, run `npm run --silent gridmargin -- run examples/np15.json run/demo.json` or the chosen job path. Open the saved record and highlight the typed price and receipt. | “This command checks the challenge, signs and submits one escrow-authorized request on its own. Here’s the observed price, miner, amount and receipt hash. This is the testnet result for the hour we entered.” |
+| 2:15–2:50 | Show LMP, maximum run LMP, run net, curtail net and action. Read the values that actually appear. | “The agent uses that purchased price to compute energy cost and compare the two options. Here are the margins behind the recommendation, including the operator’s buffer.” |
+| 2:50–3:10 | Run `verify` against a previously settled GridMargin record if one is available, and show its public delivery URL. If the on-camera epoch is pending, show that status with its receipt. | “The public receipt URL identifies this delivery in the epoch ledger. Before the block is published, the response shows epoch pending.” |
+| 3:10–3:30 | Show the README setup and an invalid-hour test or the two manual preview commands. | “You can reproduce the quote free, test failures offline, and run the purchase from your own testnet escrow. Try another CAISO hub or hour and share which result you get.” |
+
+For the submission recording, use a successful real purchase for the paid segment. If it fails during recording, keep the run record and show any available failure evidence separately. A manual preview or a 402 quote illustrates only its own step.
